@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maikel van den Boom">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <title>Downloads|Sporthuis Vlaanderen</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<nav>
+    <DIV ID="nav">
+        <h2 class="indexh2">Blijf sporten en bewegen!</h2>
+        <h1 class="indexh1">Sporthuis Vlaanderen</h1>
+        <a href="index.html" class="colornav">Home</a>
+        <a href="foto.html" class="colornav">Foto's</a>
+        <a href="downloads.html" class="colornav">Downloads</a>
+        <a href="shop.html" class="colornav">Shop</a>
+        <a href="leden.html" class="colornav">Leden</a>
+        <a href="contact.html" class="colornav">Contact</a>
+    </DIV>
+</nav>
+<div id="ccontainer">
+<h1 id="number">Bel naar <a href=tel: 0485 55 55 55>0485 55 55 55</a> of mail naar <A HREF="mailto:test@hotmail.com">test@hotmail.com</A>  voor andere vragen.
+
+    Of voor nog meer informatie.</h1>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis consequatur culpa, debitis deserunt enim explicabo impedit ipsa ipsam laborum minus perferendis possimus repudiandae saepe sed tenetur velit, voluptatibus. Dignissimos nemo nihil omnis. Aliquam doloremque ea ipsam minus. Adipisci assumenda commodi deserunt expedita impedit modi, natus nulla odio, odit perspiciatis possimus provident quos, repellendus sint tempore totam vitae voluptatibus! Adipisci architecto consequuntur facere odio praesentium rem repellendus tenetur! Aliquam animi commodi delectus, deleniti dolor dolorum error eum fugiat libero modi molestias natus necessitatibus nobis quam, quasi quidem quos recusandae repellendus reprehenderit sequi vel, veniam vitae. Animi dignissimos dolor eaque esse neque nostrum officia quibusdam quos unde voluptates. Aliquam asperiores corporis culpa doloribus eveniet fugit impedit incidunt numquam officiis quaerat, vero voluptas. Aspernatur blanditiis eum praesentium repellendus vero? Autem consequatur minus molestiae nobis reiciendis. Aliquid aspernatur aut commodi corporis culpa deleniti dolorum fugiat ipsam, maiores obcaecati officia possimus quae quam ullam velit? A at dolorum magni, necessitatibus nemo obcaecati praesentium? Asperiores id iste optio. Atque eaque eius et minima modi nemo odio odit pariatur praesentium, repellendus vero voluptates. Deserunt et in molestiae nam necessitatibus, nihil odit perspiciatis sequi sunt vel? Aperiam, dolorum, voluptate. Beatae consectetur consequatur inventore ipsum iure mollitia nesciunt nisi odit sapiente, sint sit tempora velit veritatis. Animi aperiam aspernatur commodi dolorem ea enim et eum ex facilis fuga fugiat inventore iste itaque iusto laboriosam magni, molestias nihil nulla odio odit officiis optio pariatur perferendis quaerat quia quibusdam reiciendis rem similique sit sunt tenetur ullam ut vel velit vitae.    </p>
+    <br>
+    <br>
+    <div id="contact">
+        <div class="row1">
+            <div class="col align-self-center">
+                <h1 class="text-center">Contacteer ons.</h1>
+
+                <form id="myForm">
+
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input
+                                type="name"
+                                name="name"
+                                class="form-control"
+                                id="name"
+                                placeholder="Wat is uw naam?"
+                        />
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Wat is uw email?"
+                        />
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="subject">Onderwerp</label>
+                        <input
+                                type="text"
+                                name="subject"
+                                class="form-control"
+                                id="subject"
+                                placeholder="Het onderwerp?"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+    ></script>
+
+    <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">      (function () {
+        emailjs.init("zrNCzi2hwgsxS6hrt");
+    })();
+    </script>
+
+
+    <script>
+        // listen to the form submission
+        document
+            .getElementById("myForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const serviceID = "service_thdt60t";
+                const templateID = "template_p6n8xh4";
+
+                // send the email here
+                emailjs.sendForm(serviceID, templateID, this).then(
+                    (response) => {
+                        console.log("SUCCESS!", response.status, response.text);
+                        alert("SUCCESS!");
+                    },
+                    (error) => {
+                        console.log("FAILED...", error);
+                        alert("FAILED...", error);
+                    }
+                );
+            });
+    </script>
+
+
+</body>
+</html>

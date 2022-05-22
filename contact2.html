@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maikel van den Boom">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <title>Downloads|Sporthuis Vlaanderen</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<nav>
+    <DIV ID="nav">
+        <h2 class="indexh2">Blijf sporten en bewegen!</h2>
+        <h1 class="indexh1">Sporthuis Vlaanderen</h1>
+        <a href="index.html" class="colornav">Home</a>
+        <a href="foto.html" class="colornav">Foto's</a>
+        <a href="downloads.html" class="colornav">Downloads</a>
+        <a href="shop.html" class="colornav">Shop</a>
+        <a href="leden.html" class="colornav">Leden</a>
+        <a href="contact.html" class="colornav">Contact</a>
+    </DIV>
+</nav>
+<div id="ccontainer">
+    <h1 id="number">Bel naar <a href=tel: 0485 55 55 55>0485 55 55 55</a> of mail naar <A HREF="mailto:test@hotmail.com">test@hotmail.com</A>  voor andere vragen.
+
+        Of voor nog meer informatie.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis consequatur culpa, debitis deserunt enim explicabo impedit ipsa ipsam laborum minus perferendis possimus repudiandae saepe sed tenetur velit, voluptatibus. Dignissimos nemo nihil omnis. Aliquam doloremque ea ipsam minus. Adipisci assumenda commodi deserunt expedita impedit modi, natus nulla odio, odit perspiciatis possimus provident quos, repellendus sint tempore totam vitae voluptatibus! Adipisci architecto consequuntur facere odio praesentium rem repellendus tenetur! Aliquam animi commodi delectus, deleniti dolor dolorum error eum fugiat libero modi molestias natus necessitatibus nobis quam, quasi quidem quos recusandae repellendus reprehenderit sequi vel, veniam vitae. Animi dignissimos dolor eaque esse neque nostrum officia quibusdam quos unde voluptates. Aliquam asperiores corporis culpa doloribus eveniet fugit impedit incidunt numquam officiis quaerat, vero voluptas. Aspernatur blanditiis eum praesentium repellendus vero? Autem consequatur minus molestiae nobis reiciendis. Aliquid aspernatur aut commodi corporis culpa deleniti dolorum fugiat ipsam, maiores obcaecati officia possimus quae quam ullam velit? A at dolorum magni, necessitatibus nemo obcaecati praesentium? Asperiores id iste optio. Atque eaque eius et minima modi nemo odio odit pariatur praesentium, repellendus vero voluptates. Deserunt et in molestiae nam necessitatibus, nihil odit perspiciatis sequi sunt vel? Aperiam, dolorum, voluptate. Beatae consectetur consequatur inventore ipsum iure mollitia nesciunt nisi odit sapiente, sint sit tempora velit veritatis. Animi aperiam aspernatur commodi dolorem ea enim et eum ex facilis fuga fugiat inventore iste itaque iusto laboriosam magni, molestias nihil nulla odio odit officiis optio pariatur perferendis quaerat quia quibusdam reiciendis rem similique sit sunt tenetur ullam ut vel velit vitae.    </p>
+
+
+
+
+    <div class="wrapper">
+        <h2>Contacteer ons</h2>
+        <div id="error_message">
+
+        </div>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <input type="text" id="name" placeholder="Naam" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Gsm nummer" required>
+            <textarea id="message" rows="4" placeholder="Hoe kunnen we u helpen"></textarea>
+            <button type="submit">Verstuur</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "smikelvdboom@gmail.com",
+                Password: "23Januari",
+                To: 'smikel1vdboom@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "Leren Zwemmen",
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("Message").value
+            }).then(
+                message => alert("Uw mail is verstuurd")
+            );
+        }
+
+    </script>
+</div>
+</body>
+</html>
